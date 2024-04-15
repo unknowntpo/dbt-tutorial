@@ -1,0 +1,16 @@
+# models/schema.yml
+version: 2
+
+models:
+  - name: products
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('customers')
+              field: customer_id

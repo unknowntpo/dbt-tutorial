@@ -4,11 +4,10 @@ dbt_tutorial:
     dev:
       type: postgres
       threads: 4
-      host: host.docker.internal
+      host: localhost
       port: 5432
       user: postgres
-      pass: postgres
-      dbname: Adventureworks
-      schema: warehouse
-
+      pass: password
+      dbname: adventureworks
+      schema: public
   target: dev
